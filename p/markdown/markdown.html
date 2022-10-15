@@ -1,0 +1,1806 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noodp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="Description" content="GaiGai小站初养成~">
+  <meta name="theme-color" content="#ffffff">
+  <title>Markdown 基本语法 - GaiGai&#39;s blog</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="../../css/style.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Markdown 基本语法",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/1200803.xyz\/p\/markdown\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/1200803.xyz\/p\/markdown\/featured-image.png",
+                            "width":  1420 ,
+                            "height":  708 
+                        }],"genre": "posts","keywords": "Markdown, HTML","wordcount":  4344 ,
+        "url": "https:\/\/1200803.xyz\/p\/markdown\/","datePublished": "2019-12-01T21:57:40+08:00","dateModified": "2020-01-01T16:45:40+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "GaiGai","logo": "https:\/\/1200803.xyz\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "Dillon"
+            },"description": "这篇文章展示了基本的 Markdown 语法和格式."
+    }
+    </script>
+</head>
+
+<body header-desktop="fixed" header-mobile="auto">
+  <script
+    type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+  <div id="mask"></div>
+  <div class="wrapper">
+    <header class="desktop" id="header-desktop">
+      <div class="header-wrapper">
+        <div class="header-title">
+          <a href="../../index.html" title="GaiGai&#39;s blog"><img class="lazyload logo"
+              src="../../svg/loading.min.svg" data-src="../../lib/img/logo.jpg"
+              data-srcset="../../lib/img/logo.jpg, ../../lib/img/logo.jpg 1.5x, ../../lib/img/logo.jpg 2x"
+              data-sizes="auto" alt="../../lib/img/logo.jpg" title="../../lib/img/logo.jpg" />GaiGai&#39;s Blog<span
+              class="header-title-post">📡</span></a>
+        </div>
+        <div class="menu">
+          <div class="menu-inner"><a class="menu-item" href="../../posts/posts.html"> 所有文章 </a><a class="menu-item"
+              href="../../tags/tags.html"> 标签
+            </a><a class="menu-item" href="../../categories/categories.html"> 分类 </a><a class="menu-item"
+              href="../../categories/documentation/documentation.html">
+              文档 </a><a class="menu-item" href="../../404.html">🐈 关于 </a><span class="menu-item delimiter"></span><span
+              class="menu-item search" id="search-desktop">
+              <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                <i class="fas fa-search fa-fw"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                <i class="fas fa-times-circle fa-fw"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-desktop">
+                <i class="fas fa-spinner fa-fw fa-spin"></i>
+              </span>
+            </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+              <i class="fas fa-adjust fa-fw"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <header class="mobile" id="header-mobile">
+      <div class="header-container">
+        <div class="header-wrapper">
+          <div class="header-title">
+            <a href="../../index.html" title="GaiGai&#39;s blog"><img class="lazyload logo" src="../../svg/loading.min.svg"
+                data-src="../../lib/img/logo.jpg"
+                data-srcset="../../lib/img/logo.jpg, ../../lib/img/logo.jpg 1.5x, ../../lib/img/logo.jpg 2x"
+                data-sizes="auto" alt="../../lib/img/logo.jpg" title="../../lib/img/logo.jpg" />GaiGai&#39;s Blog<span
+                class="header-title-post">📡</span></a>
+          </div>
+          <div class="menu-toggle" id="menu-toggle-mobile">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="menu" id="menu-mobile">
+          <div class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                <i class="fas fa-search fa-fw"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                <i class="fas fa-times-circle fa-fw"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fas fa-spinner fa-fw fa-spin"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              取消
+            </a>
+          </div><a class="menu-item" href="../../posts/posts.html" title="">所有文章</a><a class="menu-item"
+            href="../../tags/tags.html" title="">标签</a><a class="menu-item" href="../../categories/categories.html"
+            title="">分类</a><a class="menu-item" href="../../categories/documentation/documentation.html"
+            title="">文档</a><a class="menu-item" href="../../404.html" title="">🐈关于</a><a href="javascript:void(0);"
+            class="menu-item theme-switch" title="切换主题">
+            <i class="fas fa-adjust fa-fw"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+    <div class="search-dropdown desktop">
+      <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+      <div id="search-dropdown-mobile"></div>
+    </div>
+    <main class="main">
+      <div class="container">
+        <div class="toc" id="toc-auto">
+          <h2 class="toc-title">目录</h2>
+          <div class="toc-content" id="toc-content-auto"></div>
+        </div>
+        <article class="page single">
+          <h1 class="single-title animated flipInX">Markdown 基本语法</h1>
+          <div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://dillonzq.com" title="Author"
+                  target="_blank" rel="noopener noreffer author" class="author"><i
+                    class="fas fa-user-circle fa-fw"></i>Dillon</a></span>&nbsp;<span class="post-category">收录于 <a
+                  href="../../categories/markdown/markdown.html"><i class="far fa-folder fa-fw"></i>Markdown</a></span>
+            </div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time
+                datetime="2019-12-01">2019-12-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 4344 字&nbsp;
+              <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 9 分钟&nbsp;<span id="/p/markdown/" class="leancloud_visitors"
+                data-flag-title="Markdown 基本语法">
+                <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+              </span>&nbsp;
+            </div>
+          </div>
+          <div class="featured-image"><img class="lazyload" src="../../svg/loading.min.svg"
+              data-src="featured-image.png"
+              data-srcset="featured-image.png, featured-image.png 1.5x, featured-image.png 2x" data-sizes="auto"
+              alt="featured-image.png" title="这篇文章展示了基本的 Markdown 语法和格式." /></div>
+          <div class="details toc" id="toc-static" kept="">
+            <div class="details-summary toc-title">
+              <span>目录</span>
+              <span><i class="details-icon fas fa-angle-right"></i></span>
+            </div>
+            <div class="details-content toc-content" id="toc-content-static">
+              <nav id="TableOfContents">
+                <ul>
+                  <li><a href="#1-标题">1 标题</a></li>
+                  <li><a href="#2-注释">2 注释</a></li>
+                  <li><a href="#3-水平线">3 水平线</a></li>
+                  <li><a href="#4-段落">4 段落</a></li>
+                  <li><a href="#5-内联-html-元素">5 内联 HTML 元素</a></li>
+                  <li><a href="#6-强调">6 强调</a>
+                    <ul>
+                      <li><a href="#加粗">加粗</a></li>
+                      <li><a href="#斜体">斜体</a></li>
+                      <li><a href="#删除线">删除线</a></li>
+                      <li><a href="#组合">组合</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#7-引用">7 引用</a></li>
+                  <li><a href="#8-列表">8 列表</a>
+                    <ul>
+                      <li><a href="#无序列表">无序列表</a></li>
+                      <li><a href="#有序列表">有序列表</a></li>
+                      <li><a href="#任务列表">任务列表</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#9-代码">9 代码</a>
+                    <ul>
+                      <li><a href="#行内代码">行内代码</a></li>
+                      <li><a href="#缩进代码">缩进代码</a></li>
+                      <li><a href="#围栏代码块">围栏代码块</a></li>
+                      <li><a href="#语法高亮">语法高亮</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#10-表格">10 表格</a></li>
+                  <li><a href="#links">11 链接</a>
+                    <ul>
+                      <li><a href="#基本链接">基本链接</a></li>
+                      <li><a href="#添加一个标题">添加一个标题</a></li>
+                      <li><a href="#定位标记">定位标记</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#12-脚注">12 脚注</a></li>
+                  <li><a href="#13-图片">13 图片</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="content" id="content">
+            <p>这篇文章提供了可以在 Hugo 的文章中使用的基本 Markdown 语法示例.</p>
+            <div class="details admonition note open">
+              <div class="details-summary admonition-title">
+                <i class="icon fas fa-pencil-alt fa-fw"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>
+              </div>
+              <div class="details-content">
+                <div class="admonition-content">
+                  <p>这篇文章借鉴了一篇很棒的<a href="http://learn.getgrav.org/content/markdown" target="_blank"
+                      rel="noopener noreffer">来自 Grav 的文章</a>.</p>
+                  <p>如果你想了解 <strong>Loveit</strong> 主题的扩展 Markdown 语法, 请阅读<a href="../../404.html" rel="">扩展 Markdown
+                      语法页面</a>.</p>
+                </div>
+              </div>
+            </div>
+            <p>事实上, 编写 Web 内容很麻烦. <strong><ruby>WYSIWYG<rt>所见即所得</rt></ruby></strong> 编辑器帮助减轻了这一任务. 但通常会导致代码太糟, 或更糟糕的是,
+              网页也会很丑.</p>
+            <p>没有通常伴随的所有复杂和丑陋的问题, <strong>Markdown</strong> 是一种更好的生成 <strong>HTML</strong> 内容的方式.</p>
+            <p>一些主要好处是:</p>
+            <ol>
+              <li>Markdown 简单易学, 几乎没有多余的字符, 因此编写内容也更快.</li>
+              <li>用 Markdown 书写时出错的机会更少.</li>
+              <li>可以产生有效的 XHTML 输出.</li>
+              <li>将内容和视觉显示保持分开, 这样就不会打乱网站的外观.</li>
+              <li>可以在你喜欢的任何文本编辑器或 Markdown 应用程序中编写内容.</li>
+              <li>Markdown 使用起来很有趣!</li>
+            </ol>
+            <p>John Gruber, Markdown 的作者如是说:</p>
+            <blockquote>
+              <p>Markdown 格式的首要设计目标是更具可读性.
+                最初的想法是 Markdown 格式的文档应当以纯文本形式发布,
+                而不会看起来像被标签或格式说明所标记.
+                虽然 Markdown 的语法受到几种现有的文本到 HTML 转换工具的影响,
+                但 Markdown 语法的最大灵感来源是纯文本电子邮件的格式.</p>
+              <div id="id-1">&ndash; <em>John Gruber</em></div>
+            </blockquote>
+            <p>话不多说, 我们来回顾一下 Markdown 的主要语法以及生成的 HTML 样式!</p>
+            <div class="details admonition tip open">
+              <div class="details-summary admonition-title">
+                <i class="icon fas fa-lightbulb fa-fw"></i>技巧<i class="details-icon fas fa-angle-right fa-fw"></i>
+              </div>
+              <div class="details-content">
+                <div class="admonition-content"><i class="far fa-bookmark fa-fw"></i>&nbsp;将此页保存为书签，以备将来参考!</div>
+              </div>
+            </div>
+            <h2 id="1-标题">1 标题</h2>
+            <p>从 <code>h2</code> 到 <code>h6</code> 的标题在每个级别上都加上一个 <code>＃</code>:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="gu">## h2 标题
+</span><span class="gu">### h3 标题
+</span><span class="gu">#### h4 标题
+</span><span class="gu">##### h5 标题
+</span><span class="gu">###### h6 标题
+</span></code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p>输出的 HTML 看起来像这样:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>h2 标题<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>h3 标题<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>h4 标题<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>h5 标题<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h6</span><span class="p">&gt;</span>h6 标题<span class="p">&lt;/</span><span class="nt">h6</span><span class="p">&gt;</span>
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="details admonition note open">
+              <div class="details-summary admonition-title">
+                <i class="icon fas fa-pencil-alt fa-fw"></i>标题 ID<i class="details-icon fas fa-angle-right fa-fw"></i>
+              </div>
+              <div class="details-content">
+                <div class="admonition-content">
+                  <p>要添加自定义标题 ID, 请在与标题相同的行中将自定义 ID 放在花括号中:</p>
+                  <div class="highlight">
+                    <div class="chroma">
+                      <table class="lntable">
+                        <tr>
+                          <td class="lntd">
+                            <pre class="chroma"><code><span class="lnt">1
+</span></code></pre>
+                          </td>
+                          <td class="lntd">
+                            <pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="gu">### 一个很棒的标题 {#custom-id}
+</span></code></pre>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <p>输出的 HTML 看起来像这样:</p>
+                  <div class="highlight">
+                    <div class="chroma">
+                      <table class="lntable">
+                        <tr>
+                          <td class="lntd">
+                            <pre class="chroma"><code><span class="lnt">1
+</span></code></pre>
+                          </td>
+                          <td class="lntd">
+                            <pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">h3</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;custom-id&#34;</span><span class="p">&gt;</span>一个很棒的标题<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+</code></pre>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h2 id="2-注释">2 注释</h2>
+            <p>注释是和 HTML 兼容的：</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!--
+</span><span class="c">这是一段注释
+</span><span class="c">--&gt;</span>
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p><strong>不能</strong>看到以下的注释:</p>
+            <!--
+这是一段注释
+-->
+            <h2 id="3-水平线">3 水平线</h2>
+            <p>HTML 中的 <code>&lt;hr&gt;</code> 标签是用来在段落元素之间创建一个 &ldquo;专题间隔&rdquo; 的.
+              使用 Markdown, 你可以用以下方式创建一个 <code>&lt;hr&gt;</code> 标签:</p>
+            <ul>
+              <li><code>___</code>: 三个连续的下划线</li>
+              <li><code>---</code>: 三个连续的破折号</li>
+              <li><code>***</code>: 三个连续的星号</li>
+            </ul>
+            <p>呈现的输出效果如下:</p>
+            <hr>
+            <hr>
+            <hr>
+            <h2 id="4-段落">4 段落</h2>
+            <p>按照纯文本的方式书写段落, 纯文本在呈现的 HTML 中将用 <code>&lt;p&gt;</code>/<code>&lt;/p&gt;</code> 标签包裹.</p>
+            <p>如下段落:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-markdown" data-lang="markdown">Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri,
+animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex,
+soluta officiis concludaturque ei qui, vide sensibus vim ad.
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p>输出的 HTML 看起来像这样:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet, graecis denique ei vel, at duo primis mandamus. Et legere ocurreret pri, animal tacimates complectitur ad cum. Cu eum inermis inimicus efficiendi. Labore officiis his ex, soluta officiis concludaturque ei qui, vide sensibus vim ad.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p>可以使用一个空白行进行<strong>换行</strong>.</p>
+            <h2 id="5-内联-html-元素">5 内联 HTML 元素</h2>
+            <p>如果你需要某个 HTML 标签 (带有一个类), 则可以简单地像这样使用:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-html" data-lang="html">Markdown 格式的段落.
+
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;class&#34;</span><span class="p">&gt;</span>
+    这是 <span class="p">&lt;</span><span class="nt">b</span><span class="p">&gt;</span>HTML<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+Markdown 格式的段落.
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h2 id="6-强调">6 强调</h2>
+            <h3 id="加粗">加粗</h3>
+            <p>用于强调带有较粗字体的文本片段.</p>
+            <p>以下文本片段会被 <strong>渲染为粗体</strong>.</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-markdown" data-lang="markdown">**渲染为粗体**
+<span class="gs">__渲染为粗体__</span>
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p>输出的 HTML 看起来像这样:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>渲染为粗体<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h3 id="斜体">斜体</h3>
+            <p>用于强调带有斜体的文本片段.</p>
+            <p>以下文本片段被 <em>渲染为斜体</em>.</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-markdown" data-lang="markdown">*渲染为斜体*
+<span class="ge">_渲染为斜体_</span>
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p>输出的 HTML 看起来像这样:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>渲染为斜体<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h3 id="删除线">删除线</h3>
+            <p>按照 <a href="https://github.github.com/gfm/" target="_blank" rel="noopener noreffer"><strong><ruby>GFM<rt>
+                      GitHub flavored Markdown</rt></ruby></strong></a> 你可以使用删除线.</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-markdown" data-lang="markdown">~~这段文本带有删除线.~~
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p>呈现的输出效果如下:</p>
+            <p><del>这段文本带有删除线.</del></p>
+            <p>输出的 HTML 看起来像这样:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">del</span><span class="p">&gt;</span>这段文本带有删除线.<span class="p">&lt;/</span><span class="nt">del</span><span class="p">&gt;</span>
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h3 id="组合">组合</h3>
+            <p>加粗, 斜体, 和删除线可以 组合使用.</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-markdown" data-lang="markdown">***加粗和斜体***
+<span class="gd">~~**删除线和加粗**~~</span>
+<span class="gd">~~*删除线和斜体*~~</span>
+<span class="gd">~~***加粗, 斜体和删除线***~~</span>
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p>呈现的输出效果如下:</p>
+            <p><em><strong>加粗和斜体</strong></em></p>
+            <p><del><strong>删除线和加粗</strong></del></p>
+            <p><del><em>删除线和斜体</em></del></p>
+            <p><del><em><strong>加粗, 斜体和删除线</strong></em></del></p>
+            <p>输出的 HTML 看起来像这样:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>加粗和斜体<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">del</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>删除线和加粗<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">del</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">del</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;</span>删除线和斜体<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">del</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">del</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>加粗, 斜体和删除线<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">del</span><span class="p">&gt;</span>
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h2 id="7-引用">7 引用</h2>
+            <p>用于在文档中引用其他来源的内容块.</p>
+            <p>在要引用的任何文本之前添加 <code>&gt;</code>:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="k">&gt; </span><span class="ge">**Fusion Drive** combines a hard drive with a flash storage (solid-state drive) and presents it as a single logical volume with the space of both drives combined.
+</span></code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p>呈现的输出效果如下:</p>
+            <blockquote>
+              <p><strong>Fusion Drive</strong> combines a hard drive with a flash storage (solid-state drive) and
+                presents it as a single logical volume with the space of both drives combined.</p>
+            </blockquote>
+            <p>输出的 HTML 看起来像这样:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Fusion Drive<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> combines a hard drive with a flash storage (solid-state drive) and presents it as a single logical volume with the space of both drives combined.
+  <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">blockquote</span><span class="p">&gt;</span>
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p>引用也可以嵌套:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="k">&gt; </span><span class="ge">Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue.
+</span><span class="ge"></span>Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.
+&gt;&gt; Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor
+odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p>呈现的输出效果如下:</p>
+            <blockquote>
+              <p>Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue.
+                Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.</p>
+              <blockquote>
+                <p>Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor
+                  odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.</p>
+              </blockquote>
+            </blockquote>
+            <h2 id="8-列表">8 列表</h2>
+            <h3 id="无序列表">无序列表</h3>
+            <p>一系列项的列表, 其中项的顺序没有明显关系.</p>
+            <p>你可以使用以下任何符号来表示无序列表中的项:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="k">*</span> 一项内容
+<span class="k">-</span> 一项内容
++ 一项内容
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p>例如:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="k">*</span> Lorem ipsum dolor sit amet
+<span class="k">*</span> Consectetur adipiscing elit
+<span class="k">*</span> Integer molestie lorem at massa
+<span class="k">*</span> Facilisis in pretium nisl aliquet
+<span class="k">*</span> Nulla volutpat aliquam velit
+  <span class="k">*</span> Phasellus iaculis neque
+  <span class="k">*</span> Purus sodales ultricies
+  <span class="k">*</span> Vestibulum laoreet porttitor sem
+  <span class="k">*</span> Ac tristique libero volutpat at
+<span class="k">*</span> Faucibus porta lacus fringilla vel
+<span class="k">*</span> Aenean sit amet erat nunc
+<span class="k">*</span> Eget porttitor lorem
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p>呈现的输出效果如下:</p>
+            <ul>
+              <li>Lorem ipsum dolor sit amet</li>
+              <li>Consectetur adipiscing elit</li>
+              <li>Integer molestie lorem at massa</li>
+              <li>Facilisis in pretium nisl aliquet</li>
+              <li>Nulla volutpat aliquam velit
+                <ul>
+                  <li>Phasellus iaculis neque</li>
+                  <li>Purus sodales ultricies</li>
+                  <li>Vestibulum laoreet porttitor sem</li>
+                  <li>Ac tristique libero volutpat at</li>
+                </ul>
+              </li>
+              <li>Faucibus porta lacus fringilla vel</li>
+              <li>Aenean sit amet erat nunc</li>
+              <li>Eget porttitor lorem</li>
+            </ul>
+            <p>输出的 HTML 看起来像这样:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Consectetur adipiscing elit<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Integer molestie lorem at massa<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Facilisis in pretium nisl aliquet<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Nulla volutpat aliquam velit
+    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Phasellus iaculis neque<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Purus sodales ultricies<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Vestibulum laoreet porttitor sem<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Ac tristique libero volutpat at<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Faucibus porta lacus fringilla vel<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Aenean sit amet erat nunc<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Eget porttitor lorem<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h3 id="有序列表">有序列表</h3>
+            <p>一系列项的列表, 其中项的顺序确实很重要.</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="k">1.</span> Lorem ipsum dolor sit amet
+<span class="k">2.</span> Consectetur adipiscing elit
+<span class="k">3.</span> Integer molestie lorem at massa
+<span class="k">4.</span> Facilisis in pretium nisl aliquet
+<span class="k">5.</span> Nulla volutpat aliquam velit
+<span class="k">6.</span> Faucibus porta lacus fringilla vel
+<span class="k">7.</span> Aenean sit amet erat nunc
+<span class="k">8.</span> Eget porttitor lorem
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p>呈现的输出效果如下:</p>
+            <ol>
+              <li>Lorem ipsum dolor sit amet</li>
+              <li>Consectetur adipiscing elit</li>
+              <li>Integer molestie lorem at massa</li>
+              <li>Facilisis in pretium nisl aliquet</li>
+              <li>Nulla volutpat aliquam velit</li>
+              <li>Faucibus porta lacus fringilla vel</li>
+              <li>Aenean sit amet erat nunc</li>
+              <li>Eget porttitor lorem</li>
+            </ol>
+            <p>输出的 HTML 看起来像这样:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Lorem ipsum dolor sit amet<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Consectetur adipiscing elit<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Integer molestie lorem at massa<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Facilisis in pretium nisl aliquet<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Nulla volutpat aliquam velit<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Faucibus porta lacus fringilla vel<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Aenean sit amet erat nunc<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Eget porttitor lorem<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="details admonition tip open">
+              <div class="details-summary admonition-title">
+                <i class="icon fas fa-lightbulb fa-fw"></i>技巧<i class="details-icon fas fa-angle-right fa-fw"></i>
+              </div>
+              <div class="details-content">
+                <div class="admonition-content">
+                  <p>如果你对每一项使用 <code>1.</code>, Markdown 将自动为每一项编号. 例如:</p>
+                  <div class="highlight">
+                    <div class="chroma">
+                      <table class="lntable">
+                        <tr>
+                          <td class="lntd">
+                            <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre>
+                          </td>
+                          <td class="lntd">
+                            <pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="k">1.</span> Lorem ipsum dolor sit amet
+<span class="k">1.</span> Consectetur adipiscing elit
+<span class="k">1.</span> Integer molestie lorem at massa
+<span class="k">1.</span> Facilisis in pretium nisl aliquet
+<span class="k">1.</span> Nulla volutpat aliquam velit
+<span class="k">1.</span> Faucibus porta lacus fringilla vel
+<span class="k">1.</span> Aenean sit amet erat nunc
+<span class="k">1.</span> Eget porttitor lorem
+</code></pre>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <p>呈现的输出效果如下:</p>
+                  <ol>
+                    <li>Lorem ipsum dolor sit amet</li>
+                    <li>Consectetur adipiscing elit</li>
+                    <li>Integer molestie lorem at massa</li>
+                    <li>Facilisis in pretium nisl aliquet</li>
+                    <li>Nulla volutpat aliquam velit</li>
+                    <li>Faucibus porta lacus fringilla vel</li>
+                    <li>Aenean sit amet erat nunc</li>
+                    <li>Eget porttitor lorem</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+            <h3 id="任务列表">任务列表</h3>
+            <p>任务列表使你可以创建带有复选框的列表.
+              要创建任务列表, 请在任务列表项之前添加破折号 (<code>-</code>) 和带有空格的方括号 (<code>[ ]</code>). 要选择一个复选框，请在方括号之间添加 x
+              (<code>[x]</code>).</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="k">- [x]</span> Write the press release
+<span class="k">- [ ]</span> Update the website
+<span class="k">- [ ]</span> Contact the media
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p>呈现的输出效果如下:</p>
+            <ul>
+              <li><i class="far fa-check-square fa-fw"></i> Write the press release</li>
+              <li><i class="far fa-square fa-fw"></i> Update the website</li>
+              <li><i class="far fa-square fa-fw"></i> Contact the media</li>
+            </ul>
+            <h2 id="9-代码">9 代码</h2>
+            <h3 id="行内代码">行内代码</h3>
+            <p>用 <code>`</code> 包装行内代码段.</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-markdown" data-lang="markdown">在这个例子中, <span class="sb">`&lt;section&gt;&lt;/section&gt;`</span> 会被包裹成 <span class="gs">**代码**</span>.
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p>呈现的输出效果如下:</p>
+            <p>在这个例子中, <code>&lt;section&gt;&lt;/section&gt;</code> 会被包裹成 <strong>代码</strong>.</p>
+            <p>输出的 HTML 看起来像这样:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+  在这个例子中, <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span><span class="ni">&amp;lt;</span>section<span class="ni">&amp;gt;&amp;lt;</span>/section<span class="ni">&amp;gt;</span><span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span> 会被包裹成 <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>代码<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>.
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h3 id="缩进代码">缩进代码</h3>
+            <p>将几行代码缩进至少四个空格，例如:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-markdown" data-lang="markdown">    // Some comments
+    line 1 of code
+    line 2 of code
+    line 3 of code
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p>呈现的输出效果如下:</p>
+            <pre><code>// Some comments
+line 1 of code
+line 2 of code
+line 3 of code
+</code></pre>
+            <p>输出的 HTML 看起来像这样:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">pre</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>
+    // Some comments
+    line 1 of code
+    line 2 of code
+    line 3 of code
+  <span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h3 id="围栏代码块">围栏代码块</h3>
+            <p>使用 &ldquo;围栏&rdquo; <code>```</code> 来生成一段带有语言属性的代码块.</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="s">```markdown
+</span><span class="s"></span>Sample text here...
+<span class="s">```</span></code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p>输出的 HTML 看起来像这样:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">pre</span> <span class="na">language-html</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">code</span><span class="p">&gt;</span>Sample text here...<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h3 id="语法高亮">语法高亮</h3>
+            <p><strong><ruby>GFM<rt>GitHub Flavored Markdown</rt></ruby></strong> 也支持语法高亮.</p>
+            <p>要激活它，只需在第一个代码 &ldquo;围栏&rdquo; 之后直接添加你要使用的语言的文件扩展名,
+              <code>```js</code>, 语法高亮显示将自动应用于渲染的 HTML 中.
+            </p>
+            <p>例如, 在以下 JavaScript 代码中应用语法高亮:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="s">```js
+</span><span class="s"></span><span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span><span class="p">({</span>
+  <span class="nx">assemble</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">assets</span><span class="o">:</span> <span class="s1">&#39;docs/assets&#39;</span><span class="p">,</span>
+      <span class="nx">data</span><span class="o">:</span> <span class="s1">&#39;src/data/*.{json,yml}&#39;</span><span class="p">,</span>
+      <span class="nx">helpers</span><span class="o">:</span> <span class="s1">&#39;src/custom-helpers.js&#39;</span><span class="p">,</span>
+      <span class="nx">partials</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;src/partials/**/*.{hbs,md}&#39;</span><span class="p">]</span>
+    <span class="p">},</span>
+    <span class="nx">pages</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">layout</span><span class="o">:</span> <span class="s1">&#39;default.hbs&#39;</span>
+      <span class="p">},</span>
+      <span class="nx">files</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s1">&#39;./&#39;</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;src/templates/pages/index.hbs&#39;</span><span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+<span class="s">```</span></code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p>呈现的输出效果如下:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span><span class="p">({</span>
+  <span class="nx">assemble</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">assets</span><span class="o">:</span> <span class="s1">&#39;docs/assets&#39;</span><span class="p">,</span>
+      <span class="nx">data</span><span class="o">:</span> <span class="s1">&#39;src/data/*.{json,yml}&#39;</span><span class="p">,</span>
+      <span class="nx">helpers</span><span class="o">:</span> <span class="s1">&#39;src/custom-helpers.js&#39;</span><span class="p">,</span>
+      <span class="nx">partials</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;src/partials/**/*.{hbs,md}&#39;</span><span class="p">]</span>
+    <span class="p">},</span>
+    <span class="nx">pages</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">layout</span><span class="o">:</span> <span class="s1">&#39;default.hbs&#39;</span>
+      <span class="p">},</span>
+      <span class="nx">files</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s1">&#39;./&#39;</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;src/templates/pages/index.hbs&#39;</span><span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="details admonition note open">
+              <div class="details-summary admonition-title">
+                <i class="icon fas fa-pencil-alt fa-fw"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>
+              </div>
+              <div class="details-content">
+                <div class="admonition-content"><strong>Hugo</strong> 文档中的 <a
+                    href="https://gohugo.io/content-management/syntax-highlighting/" target="_blank"
+                    rel="noopener noreffer">语法高亮页面</a> 介绍了有关语法高亮的更多信息,
+                  包括语法高亮的 shortcode.</div>
+              </div>
+            </div>
+            <h2 id="10-表格">10 表格</h2>
+            <p>通过在每个单元格之间添加竖线作为分隔线, 并在标题下添加一行破折号 (也由竖线分隔) 来创建表格. 注意, 竖线不需要垂直对齐.</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-markdown" data-lang="markdown">| Option | Description |
+| ------ | ----------- |
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p>呈现的输出效果如下:</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Option</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>data</td>
+                  <td>path to data files to supply the data that will be passed into templates.</td>
+                </tr>
+                <tr>
+                  <td>engine</td>
+                  <td>engine to be used for processing templates. Handlebars is the default.</td>
+                </tr>
+                <tr>
+                  <td>ext</td>
+                  <td>extension to be used for dest files.</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>输出的 HTML 看起来像这样:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Option<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Description<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>data<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>path to data files to supply the data that will be passed into templates.<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>engine<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>engine to be used for processing templates. Handlebars is the default.<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>ext<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>extension to be used for dest files.<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="details admonition note open">
+              <div class="details-summary admonition-title">
+                <i class="icon fas fa-pencil-alt fa-fw"></i>文本右对齐或居中对齐<i
+                  class="details-icon fas fa-angle-right fa-fw"></i>
+              </div>
+              <div class="details-content">
+                <div class="admonition-content">
+                  <p>在任何标题下方的破折号右侧添加冒号将使该列的文本右对齐.</p>
+                  <p>在任何标题下方的破折号两边添加冒号将使该列的对齐文本居中.</p>
+                  <div class="highlight">
+                    <div class="chroma">
+                      <table class="lntable">
+                        <tr>
+                          <td class="lntd">
+                            <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre>
+                          </td>
+                          <td class="lntd">
+                            <pre class="chroma"><code class="language-markdown" data-lang="markdown">| Option | Description |
+|:------:| -----------:|
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |
+</code></pre>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <p>呈现的输出效果如下:</p>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th style="text-align:center">Option</th>
+                        <th style="text-align:right">Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="text-align:center">data</td>
+                        <td style="text-align:right">path to data files to supply the data that will be passed into
+                          templates.</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:center">engine</td>
+                        <td style="text-align:right">engine to be used for processing templates. Handlebars is the
+                          default.</td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:center">ext</td>
+                        <td style="text-align:right">extension to be used for dest files.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <h2 id="links">11 链接</h2>
+            <h3 id="基本链接">基本链接</h3>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="p">&lt;</span><span class="nt">https:</span><span class="err">//</span><span class="na">assemble</span><span class="err">.</span><span class="na">io</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">contact</span><span class="err">@</span><span class="na">revolunet</span><span class="err">.</span><span class="na">com</span><span class="p">&gt;</span>
+[<span class="nt">Assemble</span>](<span class="na">https://assemble.io</span>)
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p>呈现的输出效果如下 (将鼠标悬停在链接上，没有提示):</p>
+            <p><a href="https://assemble.io">https://assemble.io</a></p>
+            <p><a href="mailto:contact@revolunet.com">contact@revolunet.com</a></p>
+            <p><a href="https://assemble.io" target="_blank" rel="noopener noreffer">Assemble</a></p>
+            <p>输出的 HTML 看起来像这样:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://assemble.io&#34;</span><span class="p">&gt;</span>https://assemble.io<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;mailto:contact@revolunet.com&#34;</span><span class="p">&gt;</span>contact@revolunet.com<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://assemble.io&#34;</span><span class="p">&gt;</span>Assemble<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h3 id="添加一个标题">添加一个标题</h3>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-markdown" data-lang="markdown">[<span class="nt">Upstage</span>](<span class="na">https://github.com/upstage/ &#34;Visit Upstage!&#34;</span>)
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p>呈现的输出效果如下 (将鼠标悬停在链接上，会有一行提示):</p>
+            <p><a href="https://github.com/upstage/" title="Visit Upstage!" target="_blank"
+                rel="noopener noreffer">Upstage</a></p>
+            <p>输出的 HTML 看起来像这样:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://github.com/upstage/&#34;</span> <span class="na">title</span><span class="o">=</span><span class="s">&#34;Visit Upstage!&#34;</span><span class="p">&gt;</span>Upstage<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <h3 id="定位标记">定位标记</h3>
+            <p>定位标记使你可以跳至同一页面上的指定锚点. 例如, 每个章节:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="gu">## Table of Contents
+</span><span class="gu"></span>  <span class="k">*</span> [<span class="nt">Chapter 1</span>](<span class="na">#chapter-1</span>)
+  <span class="k">*</span> [<span class="nt">Chapter 2</span>](<span class="na">#chapter-2</span>)
+  <span class="k">*</span> [<span class="nt">Chapter 3</span>](<span class="na">#chapter-3</span>)
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p>将跳转到这些部分:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-markdown" data-lang="markdown"><span class="gu">## Chapter 1 &lt;a id=&#34;chapter-1&#34;&gt;&lt;/a&gt;
+</span><span class="gu"></span>Content for chapter one.
+
+<span class="gu">## Chapter 2 &lt;a id=&#34;chapter-2&#34;&gt;&lt;/a&gt;
+</span><span class="gu"></span>Content for chapter one.
+
+<span class="gu">## Chapter 3 &lt;a id=&#34;chapter-3&#34;&gt;&lt;/a&gt;
+</span><span class="gu"></span>Content for chapter one.
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="details admonition note open">
+              <div class="details-summary admonition-title">
+                <i class="icon fas fa-pencil-alt fa-fw"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>
+              </div>
+              <div class="details-content">
+                <div class="admonition-content">定位标记的位置几乎是任意的. 因为它们并不引人注目, 所以它们通常被放在同一行了.</div>
+              </div>
+            </div>
+            <h2 id="12-脚注">12 脚注</h2>
+            <p>脚注使你可以添加注释和参考, 而不会使文档正文混乱.
+              当你创建脚注时, 会在添加脚注引用的位置出现带有链接的上标编号.
+              读者可以单击链接以跳至页面底部的脚注内容.</p>
+            <p>要创建脚注引用, 请在方括号中添加插入符号和标识符 (<code>[^1]</code>).
+              标识符可以是数字或单词, 但不能包含空格或制表符.
+              标识符仅将脚注引用与脚注本身相关联 - 在脚注输出中, 脚注按顺序编号.</p>
+            <p>在中括号内使用插入符号和数字以及用冒号和文本来添加脚注内容 (<code>[^1]：这是一段脚注</code>).
+              你不一定要在文档末尾添加脚注. 可以将它们放在除列表, 引用和表格等元素之外的任何位置.</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-markdown" data-lang="markdown">这是一个数字脚注[^1].
+这是一个带标签的脚注[^label]
+
+[^1]: 这是一个数字脚注
+[^label]: 这是一个带标签的脚注
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p>这是一个数字脚注<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+            <p>这是一个带标签的脚注<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+            <h2 id="13-图片">13 图片</h2>
+            <p>图片的语法与链接相似, 但包含一个在前面的感叹号.</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-markdown" data-lang="markdown">![<span class="nt">Minion</span>](<span class="na">https://octodex.github.com/images/minion.png</span>)
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p><img class="lazyload" src="../../svg/loading.min.svg" data-src="https://octodex.github.com/images/minion.png"
+                data-srcset="https://octodex.github.com/images/minion.png, https://octodex.github.com/images/minion.png 1.5x, https://octodex.github.com/images/minion.png 2x"
+                data-sizes="auto" alt="https://octodex.github.com/images/minion.png" title="Minion" /></p>
+            <p>或者:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-markdown" data-lang="markdown">![<span class="nt">Alt text</span>](<span class="na">https://octodex.github.com/images/stormtroopocat.jpg &#34;The Stormtroopocat&#34;</span>)
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p>
+            <figure><a class="lightgallery" href="https://octodex.github.com/images/stormtroopocat.jpg" title="Alt text"
+                data-thumbnail="https://octodex.github.com/images/stormtroopocat.jpg"
+                data-sub-html="<h2>The Stormtroopocat</h2><p>Alt text</p>">
+                <img class="lazyload" src="../../svg/loading.min.svg"
+                  data-src="https://octodex.github.com/images/stormtroopocat.jpg"
+                  data-srcset="https://octodex.github.com/images/stormtroopocat.jpg, https://octodex.github.com/images/stormtroopocat.jpg 1.5x, https://octodex.github.com/images/stormtroopocat.jpg 2x"
+                  data-sizes="auto" alt="https://octodex.github.com/images/stormtroopocat.jpg" />
+              </a>
+              <figcaption class="image-caption">The Stormtroopocat</figcaption>
+            </figure>
+            </p>
+            <p>像链接一样, 图片也具有脚注样式的语法:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-markdown" data-lang="markdown">![Alt text][id]
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p>
+            <figure><a class="lightgallery" href="https://octodex.github.com/images/dojocat.jpg" title="Alt text"
+                data-thumbnail="https://octodex.github.com/images/dojocat.jpg"
+                data-sub-html="<h2>The Dojocat</h2><p>Alt text</p>">
+                <img class="lazyload" src="../../svg/loading.min.svg"
+                  data-src="https://octodex.github.com/images/dojocat.jpg"
+                  data-srcset="https://octodex.github.com/images/dojocat.jpg, https://octodex.github.com/images/dojocat.jpg 1.5x, https://octodex.github.com/images/dojocat.jpg 2x"
+                  data-sizes="auto" alt="https://octodex.github.com/images/dojocat.jpg" />
+              </a>
+              <figcaption class="image-caption">The Dojocat</figcaption>
+            </figure>
+            </p>
+            <p>稍后在文档中提供参考内容, 用来定义 URL 的位置:</p>
+            <div class="highlight">
+              <div class="chroma">
+                <table class="lntable">
+                  <tr>
+                    <td class="lntd">
+                      <pre class="chroma"><code><span class="lnt">1
+</span></code></pre>
+                    </td>
+                    <td class="lntd">
+                      <pre class="chroma"><code class="language-markdown" data-lang="markdown">[id]: https://octodex.github.com/images/dojocat.jpg  &#34;The Dojocat&#34;
+</code></pre>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="details admonition tip open">
+              <div class="details-summary admonition-title">
+                <i class="icon fas fa-lightbulb fa-fw"></i>技巧<i class="details-icon fas fa-angle-right fa-fw"></i>
+              </div>
+              <div class="details-content">
+                <div class="admonition-content"><strong>LoveIt</strong> 主题提供了一个包含更多功能的 <a
+                    href="../../404.html" rel="">图片的 shortcode</a>.</div>
+              </div>
+            </div>
+            <section class="footnotes" role="doc-endnotes">
+              <hr>
+              <ol>
+                <li id="fn:1" role="doc-endnote">
+                  <p>这是一个数字脚注 <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+                </li>
+                <li id="fn:2" role="doc-endnote">
+                  <p>这是一个带标签的脚注 <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+                </li>
+              </ol>
+            </section>
+          </div>
+          <div class="post-footer" id="post-footer">
+            <div class="post-info">
+              <div class="post-info-line">
+                <div class="post-info-mod">
+                  <span>更新于 2020-01-01</span>
+                </div>
+                <div class="post-info-license"></div>
+              </div>
+              <div class="post-info-line">
+                <div class="post-info-md"></div>
+                <div class="post-info-share">
+                  <span><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo"
+                      data-url="https://1200803.xyz/p/markdown/" data-title="Markdown 基本语法" data-ralateuid="xxxx"><i
+                        class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 百度"
+                      data-sharer="baidu" data-url="https://1200803.xyz/p/markdown/" data-title="Markdown 基本语法"><i
+                        data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/baidu.svg"></i></a></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="post-info-more">
+              <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a
+                  href="../../tags/markdown/markdown.html">Markdown</a>,&nbsp;<a href="../../tags/html/html.html">HTML</a></section>
+              <section>
+                <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a
+                    href="/">主页</a></span>
+              </section>
+            </div>
+
+            <div class="post-nav"><a href="../emoji/emoji.html" class="prev" rel="prev" title="Emoji 支持"><i
+                  class="fas fa-angle-left fa-fw"></i>Emoji 支持</a></div>
+          </div>
+          <div id="comments">
+            <div id="valine" class="comment"></div><noscript>
+              Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript>
+          </div>
+        </article>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 -
+            2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://xiaogai.xyz"
+              target="_blank">GaiGai</a></span>&nbsp;|&nbsp;<span class="license"><a
+              href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=13058202000095"
+              target="_blank">冀公网安备13058202000095号</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br
+            class="icp-br" />
+          <span class="icp"><a href="http://beian.miit.gov.cn">冀ICP备2021000332号</a></span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+      <i class="fas fa-arrow-up fa-fw"></i>
+    </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+      <i class="fas fa-comment fa-fw"></i>
+    </a>
+  </div>
+  <link rel="stylesheet" href="../../lib/valine/valine.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/css/lightgallery.min.css">
+  <link rel="stylesheet" href="../../css/790698.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/js/lightgallery.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/lg-thumbnail.js@1.2.0/dist/lg-thumbnail.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lg-zoom.js@1.2.0/dist/lg-zoom.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script>
+  <script
+    type="text/javascript">window.config = { "code": { "copyTitle": "复制到剪贴板", "maxShownLines": 10 }, "comment": { "valine": { "appId": "derC8NbTwqxTpB2NXgOLKyyK-gzGzoHsz", "appKey": "oLQ9BNU1IkTOHLQJaQykvJ06", "avatar": "monsterid", "el": "#valine", "emojiCDN": "https://cdn.jsdelivr.net/npm/emoji-datasource-google@5.0.1/img/google/64/", "emojiMaps": { "100": "1f4af.png", "alien": "1f47d.png", "anger": "1f4a2.png", "angry": "1f620.png", "anguished": "1f627.png", "astonished": "1f632.png", "black_heart": "1f5a4.png", "blue_heart": "1f499.png", "blush": "1f60a.png", "bomb": "1f4a3.png", "boom": "1f4a5.png", "broken_heart": "1f494.png", "brown_heart": "1f90e.png", "clown_face": "1f921.png", "cold_face": "1f976.png", "cold_sweat": "1f630.png", "confounded": "1f616.png", "confused": "1f615.png", "cry": "1f622.png", "crying_cat_face": "1f63f.png", "cupid": "1f498.png", "dash": "1f4a8.png", "disappointed": "1f61e.png", "disappointed_relieved": "1f625.png", "dizzy": "1f4ab.png", "dizzy_face": "1f635.png", "drooling_face": "1f924.png", "exploding_head": "1f92f.png", "expressionless": "1f611.png", "face_vomiting": "1f92e.png", "face_with_cowboy_hat": "1f920.png", "face_with_hand_over_mouth": "1f92d.png", "face_with_head_bandage": "1f915.png", "face_with_monocle": "1f9d0.png", "face_with_raised_eyebrow": "1f928.png", "face_with_rolling_eyes": "1f644.png", "face_with_symbols_on_mouth": "1f92c.png", "face_with_thermometer": "1f912.png", "fearful": "1f628.png", "flushed": "1f633.png", "frowning": "1f626.png", "ghost": "1f47b.png", "gift_heart": "1f49d.png", "green_heart": "1f49a.png", "grimacing": "1f62c.png", "grin": "1f601.png", "grinning": "1f600.png", "hankey": "1f4a9.png", "hear_no_evil": "1f649.png", "heart": "2764-fe0f.png", "heart_decoration": "1f49f.png", "heart_eyes": "1f60d.png", "heart_eyes_cat": "1f63b.png", "heartbeat": "1f493.png", "heartpulse": "1f497.png", "heavy_heart_exclamation_mark_ornament": "2763-fe0f.png", "hole": "1f573-fe0f.png", "hot_face": "1f975.png", "hugging_face": "1f917.png", "hushed": "1f62f.png", "imp": "1f47f.png", "innocent": "1f607.png", "japanese_goblin": "1f47a.png", "japanese_ogre": "1f479.png", "joy": "1f602.png", "joy_cat": "1f639.png", "kiss": "1f48b.png", "kissing": "1f617.png", "kissing_cat": "1f63d.png", "kissing_closed_eyes": "1f61a.png", "kissing_heart": "1f618.png", "kissing_smiling_eyes": "1f619.png", "laughing": "1f606.png", "left_speech_bubble": "1f5e8-fe0f.png", "love_letter": "1f48c.png", "lying_face": "1f925.png", "mask": "1f637.png", "money_mouth_face": "1f911.png", "nauseated_face": "1f922.png", "nerd_face": "1f913.png", "neutral_face": "1f610.png", "no_mouth": "1f636.png", "open_mouth": "1f62e.png", "orange_heart": "1f9e1.png", "partying_face": "1f973.png", "pensive": "1f614.png", "persevere": "1f623.png", "pleading_face": "1f97a.png", "pouting_cat": "1f63e.png", "purple_heart": "1f49c.png", "rage": "1f621.png", "relaxed": "263a-fe0f.png", "relieved": "1f60c.png", "revolving_hearts": "1f49e.png", "right_anger_bubble": "1f5ef-fe0f.png", "robot_face": "1f916.png", "rolling_on_the_floor_laughing": "1f923.png", "scream": "1f631.png", "scream_cat": "1f640.png", "see_no_evil": "1f648.png", "shushing_face": "1f92b.png", "skull": "1f480.png", "skull_and_crossbones": "2620-fe0f.png", "sleeping": "1f634.png", "sleepy": "1f62a.png", "slightly_frowning_face": "1f641.png", "slightly_smiling_face": "1f642.png", "smile": "1f604.png", "smile_cat": "1f638.png", "smiley": "1f603.png", "smiley_cat": "1f63a.png", "smiling_face_with_3_hearts": "1f970.png", "smiling_imp": "1f608.png", "smirk": "1f60f.png", "smirk_cat": "1f63c.png", "sneezing_face": "1f927.png", "sob": "1f62d.png", "space_invader": "1f47e.png", "sparkling_heart": "1f496.png", "speak_no_evil": "1f64a.png", "speech_balloon": "1f4ac.png", "star-struck": "1f929.png", "stuck_out_tongue": "1f61b.png", "stuck_out_tongue_closed_eyes": "1f61d.png", "stuck_out_tongue_winking_eye": "1f61c.png", "sunglasses": "1f60e.png", "sweat": "1f613.png", "sweat_drops": "1f4a6.png", "sweat_smile": "1f605.png", "thinking_face": "1f914.png", "thought_balloon": "1f4ad.png", "tired_face": "1f62b.png", "triumph": "1f624.png", "two_hearts": "1f495.png", "unamused": "1f612.png", "upside_down_face": "1f643.png", "weary": "1f629.png", "white_frowning_face": "2639-fe0f.png", "white_heart": "1f90d.png", "wink": "1f609.png", "woozy_face": "1f974.png", "worried": "1f61f.png", "yawning_face": "1f971.png", "yellow_heart": "1f49b.png", "yum": "1f60b.png", "zany_face": "1f92a.png", "zipper_mouth_face": "1f910.png", "zzz": "1f4a4.png" }, "enableQQ": true, "highlight": true, "lang": "zh-cn", "pageSize": 10, "placeholder": "你的评论 ...", "recordIP": true, "visitor": true } }, "lightGallery": { "actualSize": false, "exThumbImage": "data-thumbnail", "hideBarsDelay": 2000, "selector": ".lightgallery", "speed": 400, "thumbContHeight": 80, "thumbWidth": 80, "thumbnail": true }, "search": { "algoliaAppID": "PASDMWALPK", "algoliaIndex": "index.zh-cn", "algoliaSearchKey": "b42948e51daaa93df92381c8e2ac0f93", "highlightTag": "em", "maxResultLength": 10, "noResultsFound": "没有找到结果", "snippetLength": 50, "type": "algolia" } };</script>
+  <script type="text/javascript" src="../../js/theme.min.js"></script>
+</body>
+
+</html>
